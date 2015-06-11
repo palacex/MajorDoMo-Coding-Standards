@@ -1,2 +1,2 @@
 # MajorDoMo-Coding-Standards
-PHP_CodeSniffer rules (sniffs) to enforce MajorDoMo coding conventions
+This project is a collection of PHP_CodeSniffer rules (sniffs) to validate code developed for MajorDoMo. It ensures code quality and adherence to coding conventions, especially the official MajorDoMo Coding Standards.
