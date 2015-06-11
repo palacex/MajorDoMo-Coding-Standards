@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# All discussion of this script here: http://plutov.by/post/git_pre_commit_windows
+
+# Path to your PowerShell
+powerShell="c:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -ExecutionPolicy RemoteSigned -InputFormat None -Command "
+
+# Path to PHP executable
+php="d:/xampp/php/phpcs.bat"
+
+# All modified/added PHP files
+phpFiles=$(git status --short | grep -E '^(A|M)' | awk '{ print $2 }' | grep -E '\.php$')
+
+for file in $phpFiles; do
+    exec $powerShell' '$php' --standard=MajorDoMo '$file
+
+    # Success message for checking
+    success='No syntax errors detected in '$file
+
+    if ! [ "$code" == "$success" ]
+    then
+      exit 1
+    fi
+done
