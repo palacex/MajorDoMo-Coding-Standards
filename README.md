@@ -2,7 +2,7 @@
 This project is a collection of PHP_CodeSniffer rules (sniffs) to validate code developed for MajorDoMo. It ensures code quality and adherence to coding conventions, especially the official MajorDoMo Coding Standards.
 
 ## Installation
-### [XAMPP](https://www.apachefriends.org)
+### [XAMPP](https://www.apachefriends.org) for MS Windows
 * Open command prompt by going (Start -> Run -> type in 'cmd' -> press Enter).
 * Go to your php install directory (cd D:\xampp\php)
 * Install PHP Code_Sniffer from the pear.php.net:
