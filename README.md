@@ -27,6 +27,9 @@ phpcs -i
 ```bash
 git clone -b master https://github.com/palacex/MajorDoMo-Coding-Standards.git D:\Data\MajorDoMo-Coding-Standards
 ```
+* If you don’t have git on your machine, then
+  - [Download](https://github.com/palacex/MajorDoMo-Coding-Standards/archive/master.zip)
+  - Unzip it. For example to D:\Data\MajorDoMo-Coding-Standards
 * Add coding standards path to PHP_CodeSniffer configuration
 ```bash
 phpcs --config-set D:\Data\MajorDoMo-Coding-Standards MajorDoMo
