@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<ruleset name="MajorDoMo-Base">
+   <description>A MajorDoMo base coding standard.</description>
+   
+   <exclude-pattern>*/.git/*</exclude-pattern>
+   <exclude-pattern>*/cached/*</exclude-pattern>
+   <exclude-pattern>*/debmes/*</exclude-pattern>
+   <exclude-pattern>*/doc/*</exclude-pattern>
+   
+   <!-- #no-shorthand-php-tags -->
+   <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+   <!-- only one Class or Interface Declaration per File -->
+   <rule ref="Generic.Files.OneClassPerFile"/>
+   <rule ref="Generic.Files.OneInterfacePerFile"/>
+   <!-- PHP code MUST use only UTF-8 without BOM. -->
+   <rule ref="Generic.Files.ByteOrderMark"/>
+   <!-- All PHP files MUST use the Unix LF (linefeed) line ending. -->
+   <rule ref="Generic.Files.LineEndings">
+      <properties>
+         <property name="eolChar" value="\n"/>
+      </properties>
+   </rule>
+ 
+   <!-- 4.3 Methods -->
+   <!-- Visibility MUST be declared on all methods. -->
+   <rule ref="Squiz.Scope.MethodScope"/>
+   <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
+   <rule ref="Squiz.Scope.MemberVarScope"/>
+   
+   <!-- Method names MUST NOT be declared with a space after the method name. The opening brace MUST go on its own line, and the closing brace MUST go on the next line following the body. There MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis. -->
+   <rule ref="Squiz.Functions.FunctionDeclaration"/>
+   <rule ref="Squiz.Functions.LowercaseFunctionKeywords"/>
+
+   <!-- 4.4 Method Arguments -->
+   <!-- In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma. -->
+   <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
+      <properties>
+         <property name="equalsSpacing" value="1"/>
+      </properties>
+   </rule>
+   
+   <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterHint">
+      <severity>0</severity>
+   </rule>
+ 
+   <!-- PHP constructor MUST be named __construct -->
+   <rule ref="Generic.NamingConventions.ConstructorName"/>
+   <!-- PHP constants MUST be in upper case -->
+   <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+   <!-- Class names MUST be declared in StudlyCaps. -->
+   <rule ref="Squiz.Classes.ValidClassName"/>
+   
+   <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
+      <severity>1</severity>
+   </rule>
+   
+   <!-- Concatenation operator should be wrapped with one space. -->
+   <rule ref="Squiz.Strings.ConcatenationSpacing">
+      <properties>
+         <property name="spacing" value="1"/>
+      </properties>
+   </rule>
+   
+   <rule ref="Pear.Commenting.ClassComment" />
+   <rule ref="Pear.Commenting.FunctionComment" />
+   <rule ref="Pear.Commenting.InlineComment" />
+</ruleset>
