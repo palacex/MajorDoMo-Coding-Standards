@@ -60,6 +60,7 @@
    
    <!-- There MUST NOT be more than one statement per line. -->
    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+   <rule ref="Generic.Formatting.MultipleStatementAlignment"/>
  
    <!-- 2.4 Indenting -->
    <!-- Code MUST use an indent of 3 spaces, and MUST NOT use tabs for indenting. -->

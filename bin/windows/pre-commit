@@ -12,7 +12,7 @@ php="d:/xampp/php/phpcs.bat"
 phpFiles=$(git status --short | grep -E '^(A|M)' | awk '{ print $2 }' | grep -E '\.php$')
 
 for file in $phpFiles; do
-    exec $powerShell' '$php' --standard=MajorDoMo '$file
+    exec $powerShell' '$php' --standard=MajorDoMo --encoding=UTF-8 '$file
 
     # Success message for checking
     success='No syntax errors detected in '$file
