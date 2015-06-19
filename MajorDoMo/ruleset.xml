@@ -60,6 +60,7 @@
    
    <!-- There MUST NOT be more than one statement per line. -->
    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+   <!-- There Alignment for block statement. -->
    <rule ref="Generic.Formatting.MultipleStatementAlignment"/>
  
    <!-- 2.4 Indenting -->
